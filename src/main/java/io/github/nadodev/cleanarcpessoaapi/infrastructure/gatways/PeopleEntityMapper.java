@@ -1,9 +1,11 @@
-package io.github.nadodev.cleanarcpessoaapi.core.infrastructure.gatways;
+package io.github.nadodev.cleanarcpessoaapi.infrastructure.gatways;
 
 
 import io.github.nadodev.cleanarcpessoaapi.core.entities.People;
-import io.github.nadodev.cleanarcpessoaapi.core.infrastructure.persistent.PeopleEntity;
+import io.github.nadodev.cleanarcpessoaapi.infrastructure.persistent.PeopleEntity;
 import org.springframework.stereotype.Component;
+
+import java.util.Optional;
 
 @Component
 public class PeopleEntityMapper {
@@ -13,7 +15,7 @@ public class PeopleEntityMapper {
                     people.id(),
                     people.name(),
                     people.email(),
-                    people.cpfOrCnpj(),
+                    people.document(),
                     people.typePeople()
             );
         }
@@ -23,7 +25,7 @@ public class PeopleEntityMapper {
                     peopleEntity.getId(),
                     peopleEntity.getName(),
                     peopleEntity.getEmail(),
-                    peopleEntity.getCpfOrCnpj(),
+                    peopleEntity.getDocument(),
                     peopleEntity.getTypePeople()
             );
         }

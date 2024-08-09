@@ -1,4 +1,4 @@
-package io.github.nadodev.cleanarcpessoaapi.core.infrastructure.persistent;
+package io.github.nadodev.cleanarcpessoaapi.infrastructure.persistent;
 
 
 import io.github.nadodev.cleanarcpessoaapi.core.enums.EnumTypePeople;
@@ -26,8 +26,9 @@ public class PeopleEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "cpf_or_cnpj")
-    private String cpfOrCnpj;
+
+    @Column(name = "document")
+    private String document;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type_people")

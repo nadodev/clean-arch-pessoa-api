@@ -1,10 +1,9 @@
-package io.github.nadodev.cleanarcpessoaapi.core.infrastructure.gatways;
+package io.github.nadodev.cleanarcpessoaapi.infrastructure.gatways;
 
 import io.github.nadodev.cleanarcpessoaapi.core.entities.People;
 import io.github.nadodev.cleanarcpessoaapi.core.getways.PeopleGetway;
-import io.github.nadodev.cleanarcpessoaapi.core.infrastructure.persistent.PeopleEntity;
-import io.github.nadodev.cleanarcpessoaapi.core.infrastructure.persistent.PeopleRepository;
-import lombok.AllArgsConstructor;
+import io.github.nadodev.cleanarcpessoaapi.infrastructure.persistent.PeopleEntity;
+import io.github.nadodev.cleanarcpessoaapi.infrastructure.persistent.PeopleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -25,4 +24,14 @@ public class PeopleRepositoryGatway  implements PeopleGetway {
         PeopleEntity newPeople = peopleRepository.save(entity);
         return peopleEntityMapper.toPeople(newPeople);
     }
+
+    @Override
+    public People findByDocument(String document) {
+        PeopleEntity entity = peopleRepository.findByDocument(document);
+        if (entity == null) {
+            return null;
+        }
+        return peopleEntityMapper.toPeople(entity);
+    }
+
 }

@@ -1,4 +1,4 @@
-package io.github.nadodev.cleanarcpessoaapi.configuration;
+package io.github.nadodev.cleanarcpessoaapi.infrastructure.configuration;
 
 import io.github.nadodev.cleanarcpessoaapi.core.getways.PeopleGetway;
 import io.github.nadodev.cleanarcpessoaapi.core.usecases.CreatePeopleUseCase;

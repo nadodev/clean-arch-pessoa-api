@@ -1,7 +1,7 @@
-package io.github.nadodev.cleanarcpessoaapi.core.infrastructure.controllers;
+package io.github.nadodev.cleanarcpessoaapi.infrastructure.controllers;
 
 import io.github.nadodev.cleanarcpessoaapi.core.entities.People;
-import io.github.nadodev.cleanarcpessoaapi.core.infrastructure.DTOs.PeopleDTO;
+import io.github.nadodev.cleanarcpessoaapi.infrastructure.DTOs.PeopleDTO;
 import org.springframework.stereotype.Component;
 
 
@@ -12,7 +12,7 @@ public class PeopleDTOMapper {
         return new PeopleDTO(
             people.name(),
             people.email(),
-            people.cpfOrCnpj(),
+            people.document(),
             people.typePeople()
         );
     }
@@ -22,7 +22,7 @@ public class PeopleDTOMapper {
                 null,
                 peopleDTO.name(),
                 peopleDTO.email(),
-                peopleDTO.cpfOrCnpj(),
+                peopleDTO.document(),
                 peopleDTO.typePeople()
         );
     }

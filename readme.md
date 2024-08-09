@@ -26,16 +26,25 @@
 
 ## 🚀 Endpoints
 
-- ` POST /api/v1/usuarios ` - Cria uma Pessoa
+- ` POST /api/v1/people ` - Cria uma Pessoa
 
 ```json
-//schema
 
 {
   "name": "Jhon Joh",
   "email": "jhonjoh@hotmail.com",
-  "document" : "111.111.111-11",
+  "document" : "11111111111",
   "typePeople": "LEGAL_PERSON"
 }
 ```
+or
 
+```json
+
+{
+  "name": "Jhon Joh",
+  "email": "jhonjoh@hotmail.com",
+  "document" : "82179908000179",
+  "typePeople": "PHYSICAL_PERSON"
+}
+```

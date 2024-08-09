@@ -5,6 +5,7 @@ import io.github.nadodev.cleanarcpessoaapi.core.entities.People;
 import io.github.nadodev.cleanarcpessoaapi.core.infrastructure.DTOs.PeopleDTO;
 import io.github.nadodev.cleanarcpessoaapi.core.usecases.CreatePeopleUseCase;
 import lombok.AllArgsConstructor;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class PeopleController {
 
-    private  final CreatePeopleUseCase createPeopleUseCase;
-
+    private final CreatePeopleUseCase createPeopleUseCase;
     private final PeopleDTOMapper peopleDTOMapper;
 
+    @PostMapping("/people")
     public PeopleDTO create(@RequestBody  PeopleDTO peopleDTO) {
         People newPeople =  createPeopleUseCase.execute(peopleDTOMapper.toEntity(peopleDTO));
         return peopleDTOMapper.toDto(newPeople);

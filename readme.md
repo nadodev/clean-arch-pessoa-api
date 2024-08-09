@@ -18,6 +18,7 @@
 
 - Clone o projeto
 - Criar um banco de dados MySQL
+- Alterar as configurações do banco de dados no arquivo `application.properties`
 - Acesse a pasta do projeto
 - Execute o comando `mvn clean install`
 - Execute o comando `mvn spring-boot:run`

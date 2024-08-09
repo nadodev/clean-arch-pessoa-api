@@ -24,4 +24,18 @@
 - Execute o comando `mvn spring-boot:run`
 
 
+## 🚀 Endpoints
+
+- ` POST /api/v1/usuarios ` - Cria uma Pessoa
+
+```json
+//schema
+
+{
+  "name": "Jhon Joh",
+  "email": "jhonjoh@hotmail.com",
+  "document" : "111.111.111-11",
+  "typePeople": "LEGAL_PERSON"
+}
+```
 
